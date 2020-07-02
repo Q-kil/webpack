@@ -5,5 +5,5 @@
 How to use babel
 
 #### module
-node module＜/br＞
+node module  
 ES6 module use webpack
