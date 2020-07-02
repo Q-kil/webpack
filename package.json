@@ -4,5 +4,13 @@
   "main": "index.js",
   "repository": "git@github.com:KilFront/webpack.git",
   "author": "KilFront <kaifawebb@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d dest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4"
+  }
 }
