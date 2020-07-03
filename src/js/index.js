@@ -1,3 +1,3 @@
 import '../css/main.css';
 
-alert('a');
+import 'bootstrap/dist/css/bootstrap.css';

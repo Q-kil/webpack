@@ -31,7 +31,31 @@ module.exports = {
             ]
           }
         }
-      ]}
+      ]},
+      /*{test: /\.(jpg|png|gif)$/i, use: {
+        loader: 'file-loader',
+        options: {
+          outputPath: 'imgs', //相对路径  相对于output.path
+          publicPath: 'dest/imgs/'
+        }
+      }}*/
+      {test: /\.(jpg|png|gif)$/i, use: {
+        loader: 'url-loader',
+        options: {
+          outputPath: 'imgs', //相对路径  相对于output.path
+          publicPath: 'dest/imgs/',
+          limit: 40*1024
+        }
+      }},
+      // 字体文件
+      {test: /\.(eot|svg|ttf|woff|woff2)$/i, use: {
+        loader: 'url-loader',
+        options: {
+          outputPath: 'fonts/',
+          publicPath: 'dest/fonts',
+          limit: 4*1024
+        }
+      }}
     ]
   }
 }

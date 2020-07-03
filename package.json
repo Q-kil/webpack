@@ -7,9 +7,12 @@
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.8.4",
+    "bootstrap": "3",
     "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
     "postcss-loader": "^3.0.0",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0"
   },
   "browserslist": [
     "last 5 version",
