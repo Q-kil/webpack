@@ -13,3 +13,6 @@ webpack 基础配置
 
 #### css
 How to use style-loader css-loader
+
+#### file
+How to use file-loader url-loader
