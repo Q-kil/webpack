@@ -16,3 +16,6 @@ How to use style-loader css-loader
 
 #### file
 How to use file-loader url-loader
+
+#### less
+use less-loader less
