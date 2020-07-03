@@ -1,3 +1,5 @@
-import '../css/main.css';
+// import '../css/main.css';
 
-alert('a');
+// alert('a');
+
+import '../less/1.less'
