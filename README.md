@@ -22,3 +22,8 @@ use less-loader less
 
 #### ES6
 user babel-loader
+
+#### dev-server
+开启开发服务器
+- 提供网络环境
+- 热更新
