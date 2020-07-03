@@ -19,3 +19,6 @@ How to use file-loader url-loader
 
 #### less
 use less-loader less
+
+#### ES6
+user babel-loader
