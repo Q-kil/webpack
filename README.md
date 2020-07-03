@@ -21,9 +21,12 @@ How to use file-loader url-loader
 use less-loader less
 
 #### ES6
-user babel-loader
+use babel-loader
 
 #### dev-server
 开启开发服务器
 - 提供网络环境
 - 热更新
+
+#### eslint
+use eslint eslint-loader
