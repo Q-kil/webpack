@@ -31,7 +31,15 @@ module.exports = {
             ]
           }
         }
-      ]}
+      ]},
+      {
+        test: /\.js$/i,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      }
     ]
+  },
+  resolve: {
+    extensions: ['', 'js', 'jsx']
   }
 }
