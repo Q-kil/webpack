@@ -32,4 +32,5 @@ use babel-loader
 use eslint eslint-loader
 use jest
 
-#### 
+#### whole
+搭建一个完整的webpack
