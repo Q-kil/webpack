@@ -30,3 +30,6 @@ use babel-loader
 
 #### eslint
 use eslint eslint-loader
+use jest
+
+#### 
