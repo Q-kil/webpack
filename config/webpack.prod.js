@@ -2,6 +2,7 @@ const path = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const {STYLELINT} = require('./index');
 
 module.exports = {
   mode: 'production',
@@ -10,9 +11,9 @@ module.exports = {
     filename: 'bundle.min.js'
   },
   plugins: [
-    new StyleLintPlugin({
+    ...STYLELINT?[new StyleLintPlugin({
       files: ['**/*.css', '**/*.less', '**/*.html', '**/*.vue', '**/*.scss']
-    }),
+    })]:[],
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../index.html')
     })

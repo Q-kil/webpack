@@ -1,5 +1,6 @@
 const path = require('path');
 const styleLintPlugin = require('stylelint-webpack-plugin');
+const {ESLINT} = require('./config/index');
 
 module.exports = function (env, argv) {
   env = env||{};
@@ -23,15 +24,17 @@ module.exports = function (env, argv) {
           options: {
             presets: ['@babel/preset-env']
           }
-        }, {
+        },
+        ...ESLINT?[{
           loader: 'eslint-loader',
           options: {
             exclude: /node_modules/
           }
-        }]},
+        }]:[]
+      ]},
 
         // css
-        {test: /\.css$/i, use:['style-loader', 'css-loader', {
+        {test: /\.css$/i, use:['vue-loader', 'css-loader', {
           loader: 'postcss-loader',
           options: {
             plugins: [
@@ -59,9 +62,18 @@ module.exports = function (env, argv) {
             outputPath: 'fonts/',
             limit: 4*1024
           }
-        }}
+        }},
+
+        // vue
+        {test: /\.vue$/i, use: 'vue-loader'}
       ]
     },
-    ...conf
+    ...conf,
+    resolve: {
+      alias: {
+        'vue': 'vue/dist/vue.esm',
+        '@': path.resolve(__dirname, './src/js/')
+      }
+    }
   }
 }
