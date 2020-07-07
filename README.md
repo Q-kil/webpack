@@ -34,3 +34,6 @@ use jest
 
 #### whole
 搭建一个完整的webpack
+
+#### Vue2.x template
+vue_webpack
