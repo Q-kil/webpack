@@ -1,13 +1,14 @@
 const path = require('path');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const {STYLELINT} = require('./index');
 
 module.exports = {
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, '../dest'),
+    path: path.resolve(__dirname, '../dist'),
     filename: 'bundle.min.js'
   },
   plugins: [
@@ -16,6 +17,7 @@ module.exports = {
     })]:[],
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../index.html')
-    })
+    }),
+    new VueLoaderPlugin()
   ]
 }
