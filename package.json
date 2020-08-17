@@ -5,7 +5,11 @@
   "repository": "git@github.com:KilFront/webpack.git",
   "author": "KilFront <kaifawebb@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack"
+  },
   "dependencies": {
+    "copy-webpack-plugin": "^6.0.3",
     "jquery": "^3.5.1"
   }
 }
