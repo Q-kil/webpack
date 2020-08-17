@@ -37,3 +37,6 @@ use jest
 
 #### Vue2.x template
 vue_webpack
+
+#### copy-webpack-plugin
+use plugin
